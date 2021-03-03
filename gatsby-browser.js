@@ -4,4 +4,14 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import { Auth } from "@aws-amplify/auth";
+
+export const onClientEntry = () => {
+    Auth.configure({
+        Auth: {
+            region: "",
+            userPoolId: "",
+            userPoolWebClientId: ""
+        }
+    });
+};
